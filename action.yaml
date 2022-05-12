@@ -57,7 +57,7 @@ runs:
         GIT_AUTHOR_EMAIL: github@beezlabs.com
         GIT_COMMITTER_EMAIL: github@beezlabs.com
       run: |
-        git add .
+        git add -A
         git diff-index --quiet HEAD || git commit -m "feat: Update app manifest for ${{ inputs.app-name }} in cluster ${{ inputs.cluster }} for release $RELEASE_ID"
         git push
       shell: bash
